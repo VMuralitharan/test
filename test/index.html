@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practical Exam Solutions</title>
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #166088;
+            --accent-color: #4cb5c3;
+            --light-color: #f5f7fa;
+            --dark-color: #333;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            padding-bottom: 2rem;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .answers-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .answer-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .answer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-header h2 {
+            font-size: 1.5rem;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .code-block {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .demo-section {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #f0f8ff;
+            border-radius: 4px;
+            border: 1px dashed var(--accent-color);
+        }
+        
+        .demo-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .demo-button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .demo-button:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .demo-paragraph {
+            margin: 1rem 0;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .marks {
+            display: inline-block;
+            background-color: var(--warning-color);
+            color: var(--dark-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (min-width: 768px) {
+            .answers-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .answer-card:nth-child(5),
+            .answer-card:nth-child(6) {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>JavaScript Practical Exam Solutions</h1>
+            <p class="subtitle">Complete answers with interactive examples</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="answers-container">
+            <!-- Answer 1a -->
+            <div class="answer-card">
+                <div class="card-header">
+                    <h2>Answer 1(a)</h2>
+                    <span class="marks">5 marks</span>
+                </div>
+                <div class="card-body">
+                    <p>Write a JavaScript statement to show an alert box with the text "Welcome to JavaScript Practical Exam!"</p>
+                    <div class="code-block">
+                        alert("Welcome to JavaScript Practical Exam!");
+                    </div>
+                    <div class="demo-section">
+                        <h3>Demo</h3>
+                        <button class="demo-button" onclick="alert('Welcome to JavaScript Practical Exam!')">Show Alert</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Answer 1b -->
+            <div class="answer-card">
+                <div class="card-header">
+                    <h2>Answer 1(b)</h2>
+                    <span class="marks">5 marks</span>
+                </div>
+                <div class="card-body">
+                    <p>Create a paragraph with the text "This is sample text." and use JavaScript to change it to "Text has been changed successfully."</p>
+                    <div class="code-block">
+                        &lt;!-- HTML --&gt;
+                        &lt;p id="myParagraph"&gt;This is sample text.&lt;/p&gt;
+                        
+                        &lt;script&gt;
+                        // JavaScript
+                        document.getElementById("myParagraph").textContent = "Text has been changed successfully.";
+                        &lt;/script&gt;
+                    </div>
+                    <div class="demo-section">
+                        <h3>Demo</h3>
+                        <p id="demoParagraph1b">This is sample text.</p>
+                        <button class="demo-button" onclick="changeParagraphText()">Change Text</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Answer 1c -->
+            <div class="answer-card">
+                <div class="card-header">
+                    <h2>Answer 1(c)</h2>
+                    <span class="marks">10 marks</span>
+                </div>
+                <div class="card-body">
+                    <p>Use JavaScript to change the paragraph's text color to red and font size to 24px.</p>
+                    <div class="code-block">
+                        &lt;script&gt;
+                        const para = document.getElementById("myParagraph");
+                        para.style.color = "red";
+                        para.style.fontSize = "24px";
+                        &lt;/script&gt;
+                    </div>
+                    <div class="demo-section">
+                        <h3>Demo</h3>
+                        <p id="demoParagraph1c">This is sample text.</p>
+                        <button class="demo-button" onclick="changeParagraphStyle()">Change Style</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Answer 1d -->
+            <div class="answer-card">
+                <div class="card-header">
+                    <h2>Answer 1(d)</h2>
+                    <span class="marks">10 marks</span>
+                </div>
+                <div class="card-body">
+                    <p>Add a button with the label "Click Me" and write JavaScript so that when clicked, an alert appears with "Button was clicked!"</p>
+                    <div class="code-block">
+                        &lt;!-- HTML --&gt;
+                        &lt;button id="myButton"&gt;Click Me&lt;/button&gt;
+                        
+                        &lt;script&gt;
+                        const button = document.getElementById("myButton");
+                        button.addEventListener("click", function() {
+                            alert("Button was clicked!");
+                        });
+                        &lt;/script&gt;
+                    </div>
+                    <div class="demo-section">
+                        <h3>Demo</h3>
+                        <button id="demoButton1d" class="demo-button">Click Me</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Answer 1e(1) -->
+            <div class="answer-card">
+                <div class="card-header">
+                    <h2>Answer 1(e)(1)</h2>
+                    <span class="marks">7 marks</span>
+                </div>
+                <div class="card-body">
+                    <p>Write a JavaScript function named addNumbers that takes two numbers as input and returns their sum. Call it with 5 and 10 and display the result.</p>
+                    <div class="code-block">
+                        &lt;script&gt;
+                        function addNumbers(num1, num2) {
+                            return num1 + num2;
+                        }
+                        
+                        let sum = addNumbers(5, 10);
+                        document.getElementById("result").textContent = "The sum is: " + sum;
+                        &lt;/script&gt;
+                    </div>
+                    <div class="demo-section">
+                        <h3>Demo</h3>
+                        <p id="demoResult1e1">The sum will appear here.</p>
+                        <button class="demo-button" onclick="calculateSum1()">Calculate Sum</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Answer 1e(2) -->
+            <div class="answer-card">
+                <div class="card-header">
+                    <h2>Answer 1(e)(2)</h2>
+                    <span class="marks">8 marks</span>
+                </div>
+                <div class="card-body">
+                    <p>Rewrite the same function addNumbers using an arrow function. Call it with 5 and 10 and display the result.</p>
+                    <div class="code-block">
+                        &lt;script&gt;
+                        const addNumbers = (num1, num2) => num1 + num2;
+                        
+                        let sum = addNumbers(5, 10);
+                        document.getElementById("result").textContent = "The sum is: " + sum;
+                        &lt;/script&gt;
+                    </div>
+                    <div class="demo-section">
+                        <h3>Demo</h3>
+                        <p id="demoResult1e2">The sum will appear here.</p>
+                        <button class="demo-button" onclick="calculateSum2()">Calculate Sum</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>JavaScript Practical Exam Solutions - Created for educational purposes</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Answer 1b functionality
+        function changeParagraphText() {
+            document.getElementById("demoParagraph1b").textContent = "Text has been changed successfully.";
+        }
+        
+        // Answer 1c functionality
+        function changeParagraphStyle() {
+            const para = document.getElementById("demoParagraph1c");
+            para.style.color = "red";
+            para.style.fontSize = "24px";
+        }
+        
+        // Answer 1d functionality
+        document.getElementById("demoButton1d").addEventListener("click", function() {
+            alert("Button was clicked!");
+        });
+        
+        // Answer 1e(1) functionality
+        function addNumbers(num1, num2) {
+            return num1 + num2;
+        }
+        
+        function calculateSum1() {
+            let sum = addNumbers(5, 10);
+            document.getElementById("demoResult1e1").textContent = "The sum is: " + sum;
+        }
+        
+        // Answer 1e(2) functionality
+        const addNumbersArrow = (num1, num2) => num1 + num2;
+        
+        function calculateSum2() {
+            let sum = addNumbersArrow(5, 10);
+            document.getElementById("demoResult1e2").textContent = "The sum is: " + sum;
+        }
+    </script>
+</body>
+</html>
